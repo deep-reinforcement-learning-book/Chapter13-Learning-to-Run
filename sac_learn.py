@@ -573,7 +573,7 @@ if __name__ == '__main__':
     AUTO_ENTROPY = True
     DETERMINISTIC = False
     hidden_dim = 512
-    model_path = './sac_model/sac_v2_multi'
+    model_path = './model/sac_v2_multi'
 
     sac_trainer = SAC_Trainer(replay_buffer, hidden_dim=hidden_dim, action_range=action_range)
 
@@ -623,7 +623,7 @@ if __name__ == '__main__':
     if args.test:
         # single process for testing
         env = L2RunEnv(visualize=True)  # L2M2019Env
-        trained_model_path = './sac_model/trained_model/sac_v2_multi'
+        trained_model_path = './model/trained_model/sac_v2_multi'
         sac_trainer.load_model(trained_model_path)
         sac_trainer.to_cuda()  # from cpu to cuda
         for eps in range(10):
