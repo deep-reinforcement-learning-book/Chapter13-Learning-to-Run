@@ -6,11 +6,11 @@ Example of solving [*NIPS 2017: Learning to Run* challenge](https://www.crowdai.
 </p>
 
 ## Dependencies:
-* Osim: install the Osim environment following [here](https://github.com/stanfordnmbl/osim-rl) or using the [docker](https://hub.docker.com/r/stanfordnmbl/opensim-rl) (`docker pull stanfordnmbl/opensim-rl`)
+* osim-rl: install the osim-rl environment following [here](https://github.com/stanfordnmbl/osim-rl) or using the [docker](https://hub.docker.com/r/stanfordnmbl/opensim-rl) (`docker pull stanfordnmbl/opensim-rl`)
 * PyTorch
 
 ## Contents:
-* `osim/`: the original version of osim for *NIPS 2017: Learning to Run* challenge, osim environments have been updated and no longer provide 2017 version through direct installation;
+* `osim/`: the original version of osim-rl for *NIPS 2017: Learning to Run* challenge, osim-rl environments have been updated and no longer provide 2017 version through direct package installation;
 * `figures/`: figures for displaying;
 * `model/`: models after training;
 * `sac_learn.py`: pralleled Soft Actor-Critic algorithm for solving *NIPS 2017: Learning to Run* task;
