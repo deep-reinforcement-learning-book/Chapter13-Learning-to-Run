@@ -1,41 +1,31 @@
-# Project2: RL for Robotics
+# Project1: RL for Learning to Run
 ## Description:
-Example of Sawyer robot learning to reach the target with paralleled Soft Actor-Critic (SAC) algorithm, using PyRep for Sawyer robot simulation and game building. The environment is wrapped into OpenAI Gym format.
+Example of solving [*NIPS 2017: Learning to Run* challenge](https://www.crowdai.org/challenges/nips-2017-learning-to-run) with paralleled Soft Actor-Critic (SAC) algorithm. 
 <p align="center">
-<img src="https://github.com/deep-reinforcement-learning-book/Project2-RL-for-Robotics/blob/master/figures/reacher.gif" width="40%">
+<img src="https://github.com/deep-reinforcement-learning-book/Project1-RL-for-Learning-to-Run/blob/master/figures/learning2run.gif" width="40%">
 </p>
 
 ## Dependencies:
-* [V-REP 3.6.2](http://www.coppeliarobotics.com/)
-* [PyRep](https://github.com/stepjam/PyRep)
+* Osim: install the Osim environment following [here](https://github.com/stanfordnmbl/osim-rl) or using the [docker](https://hub.docker.com/r/stanfordnmbl/opensim-rl) (`docker pull stanfordnmbl/opensim-rl`)
 * PyTorch
 
 ## Contents:
-* `arms/`: object models of arms;
-* `hands/`: object models of grippers;
-* `objects/`: models of other objects in the scene;
-* `scenes/`: built scenes for Sawyer robot grasping;
+* `osim/`: the original version of osim for *NIPS 2017: Learning to Run* challenge, osim environments have been updated and no longer provide 2017 version through direct installation;
 * `figures/`: figures for displaying;
 * `model/`: models after training;
-* `reacher_sawyer_env_boundingbox.py`: script of Sawyer robot grasping envrionment;
-* `sac_learn.py`: pralleled Soft Actor-Critic algorithm for solving Sawyer robot grasping task;
+* `sac_learn.py`: pralleled Soft Actor-Critic algorithm for solving *NIPS 2017: Learning to Run* task;
 * `reward_log.npy`: log of episode reward during training;
 * `plot.ipynb`: displaying the learning curves.
 
 
 ## Usage:
-0. First check the environment can run successfully:
-
-    `$ python reacher_sawyer_env_boundingbox.py`
-
-    If it works properly with VRep called to run a scene, with Sawyer robot arm moving randomly, then go to next step; otherwise check the dependencies for necessary packages and versions.
 1. Run `$ python sac_learn.py --train` for training the policy
 
-2. Run `$ python sac_learn.py --test` for testing the trained policy, remember to change the `trained_model_path`, which is default to be the trained model we provided.
+2. Run `$ python sac_learn.py --test` for testing the trained policy, remember to change the `trained_model_path` for testing your own model, which is default to be the trained model we provided.
 
 3. The training process will provide a `reward_log.npy` file for recording the reward value during training, which can be displayed with `$ jupyter notebook` in a new terminal, choose `plot.ipynb`and Shift+Enter, as follows:
 <p align="center">
-<img src="https://github.com/deep-reinforcement-learning-book/Project2-RL-for-Robotics/blob/master/figures/training.png" width="80%">
+<img src="https://github.com/deep-reinforcement-learning-book/Project1-RL-for-Learning-to-Run/blob/master/figures/training.png" width="80%">
 </p>
 
 ## Authors:
@@ -45,12 +35,12 @@ Example of Sawyer robot learning to reach the target with paralleled Soft Actor-
 ## Citing:
 
 ```
-@misc{DeepReinforcementLearning-Project2-RLforRobotLearning,
+@misc{DeepReinforcementLearning-Project2-RLforLearningtoRun,
   author = {Zihan Ding, Yanhua Huang},
-  title = {Project2-RLforRobotLearning},
+  title = {Project2-RLforLearningtoRun},
   year = {2019},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/deep-reinforcement-learning-book/Project2-RL-for-Robotics}},
+  howpublished = {\url{https://github.com/deep-reinforcement-learning-book/Project2-RL-for-Learning-to-Run}},
 }
 ```
