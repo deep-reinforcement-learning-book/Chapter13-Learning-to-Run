@@ -9,6 +9,39 @@ Example of solving [*NIPS 2017: Learning to Run* challenge](https://www.crowdai.
 * osim-rl: install the osim-rl environment following [here](https://github.com/stanfordnmbl/osim-rl) or using the [docker](https://hub.docker.com/r/stanfordnmbl/opensim-rl) (`docker pull stanfordnmbl/opensim-rl`)
 * PyTorch
 
+The environment dependencies can be installed as follows with a new conda env (opensim-rl):
+
+```python
+# 1. Create a conda environment with the OpenSim package.
+conda create -n opensim-rl -c kidzik opensim python=3.6.1
+
+# 2. Activate the conda environment we just created.
+# On windows, run:
+activate opensim-rl
+
+# On Linux/OSX, run:
+source activate opensim-rl
+
+# 3. Install our python reinforcement learning environment.
+conda install -c conda-forge lapack git
+pip install osim-rl
+
+# 4. Git clone the Nips2017 environment and our solution.
+git clone https://github.com/deep-reinforcement-learning-book/Project1-RL-for-Learning-to-Run
+```
+
+If installed correctly, run following script should start the env:
+
+```python
+from osim.env import RunEnv
+env = RunEnv(visualize=True)
+observation = env.reset(difficulty = 0)
+for i in range(200):
+    observation, reward, done, info = env.step(env.action_space.sample())
+```
+
+
+
 ## Contents:
 * `osim/`: the original version of osim-rl for *NIPS 2017: Learning to Run* challenge, osim-rl environments have been updated and no longer provide 2017 version through direct package installation;
 * `figures/`: figures for displaying;

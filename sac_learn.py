@@ -106,7 +106,6 @@ class SharedAdam(optim.Optimizer):
                 for k, v in state.items():
                     if isinstance(v, torch.Tensor):
                         state[k] = v.to(device)
-                ### ADD
 
                 # State initialization
                 if len(state) == 0:
@@ -279,7 +278,6 @@ class PolicyNetwork(nn.Module):
         x = F.elu(self.ln4(self.linear4(x)))
 
         mean    = (self.mean_linear(x))
-        # mean    = F.leaky_relu(self.mean_linear(x))
         log_std = self.log_std_linear(x)
         log_std = torch.clamp(log_std, self.log_std_min, self.log_std_max)
         
@@ -306,7 +304,6 @@ class PolicyNetwork(nn.Module):
 
     def get_action(self, state, deterministic):
         state = torch.FloatTensor(state).unsqueeze(0).cuda()
-        # print(state)
         mean, log_std = self.forward(state)
         std = log_std.exp()
         
@@ -375,7 +372,6 @@ class SAC_Trainer():
     def update(self, batch_size, reward_scale=10., auto_entropy=True, target_entropy=-2, gamma=0.99,
                soft_tau=1e-2):
         state, action, reward, next_state, done = self.replay_buffer.sample(batch_size)
-        # print('sample:', state, action,  reward, done)
 
         state = torch.FloatTensor(state).cuda()
         next_state = torch.FloatTensor(next_state).cuda()
@@ -394,7 +390,6 @@ class SAC_Trainer():
         # trade-off between exploration (max entropy) and exploitation (max Q)
         if auto_entropy is True:
             alpha_loss = -(self.log_alpha() * (log_prob - 1.0 * self.action_dim).detach()).mean()  # self.log_alpha as forward function to get value
-            # print('alpha loss: ',alpha_loss)
             self.alpha_optimizer.zero_grad()
             alpha_loss.backward()
             self.alpha_optimizer.step()
