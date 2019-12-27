@@ -2,7 +2,7 @@
 ## Description:
 Example of solving [*NIPS 2017: Learning to Run* challenge](https://www.crowdai.org/challenges/nips-2017-learning-to-run) with paralleled Soft Actor-Critic (SAC) algorithm. 
 <p align="center">
-<img src="https://github.com/deep-reinforcement-learning-book/Project1-RL-for-Learning-to-Run/blob/master/figures/learning2run.gif" width="40%">
+<img src="https://github.com/deep-reinforcement-learning-book/Chapter14-Learning-to-Run/blob/master/figures/learning2run.gif" width="40%">
 </p>
 
 ## Dependencies:
@@ -58,7 +58,7 @@ for i in range(200):
 
 3. The training process will provide a `reward_log.npy` file for recording the reward value during training, which can be displayed with `$ jupyter notebook` in a new terminal, choose `plot.ipynb`and Shift+Enter, as follows:
 <p align="center">
-<img src="https://github.com/deep-reinforcement-learning-book/Project1-RL-for-Learning-to-Run/blob/master/figures/training.png" width="80%">
+<img src="https://github.com/deep-reinforcement-learning-book/Chapter14-Learning-to-Run/blob/master/figures/training.png" width="80%">
 </p>
 
 ## Authors:
