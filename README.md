@@ -68,12 +68,12 @@ for i in range(200):
 ## Citing:
 
 ```
-@misc{DeepReinforcementLearning-Project2-RLforLearningtoRun,
+@misc{DeepReinforcementLearning-Chapter14-LearningtoRun,
   author = {Zihan Ding, Yanhua Huang},
   title = {Project2-RLforLearningtoRun},
   year = {2019},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/deep-reinforcement-learning-book/Project2-RL-for-Learning-to-Run}},
+  howpublished = {\url{https://github.com/deep-reinforcement-learning-book/Chapter14-Learning-to-Run}},
 }
 ```
