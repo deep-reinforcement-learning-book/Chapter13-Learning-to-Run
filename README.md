@@ -1,4 +1,4 @@
-# Project1: RL for Learning to Run
+# Chapter 14: Learning to Run (Project 1)
 ## Description:
 Example of solving [*NIPS 2017: Learning to Run* challenge](https://www.crowdai.org/challenges/nips-2017-learning-to-run) with paralleled Soft Actor-Critic (SAC) algorithm. 
 <p align="center">
