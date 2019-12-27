@@ -70,7 +70,7 @@ for i in range(200):
 ```
 @misc{DeepReinforcementLearning-Chapter14-LearningtoRun,
   author = {Zihan Ding, Yanhua Huang},
-  title = {Project2-RLforLearningtoRun},
+  title = {Chapter14-LearningtoRun},
   year = {2019},
   publisher = {GitHub},
   journal = {GitHub repository},
