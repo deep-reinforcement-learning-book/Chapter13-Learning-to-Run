@@ -1,4 +1,4 @@
-# Chapter 14: Learning to Run (Project 1)
+# Chapter 13: Learning to Run (Project 1)
 ## Description:
 Example of solving [*NIPS 2017: Learning to Run* challenge](https://www.crowdai.org/challenges/nips-2017-learning-to-run) with paralleled Soft Actor-Critic (SAC) algorithm. 
 <p align="center">
@@ -70,10 +70,10 @@ for i in range(200):
 ```
 @misc{DeepReinforcementLearning-Chapter14-LearningtoRun,
   author = {Zihan Ding, Yanhua Huang},
-  title = {Chapter14-LearningtoRun},
+  title = {Chapter13-LearningtoRun},
   year = {2019},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/deep-reinforcement-learning-book/Chapter14-Learning-to-Run}},
+  howpublished = {\url{https://github.com/deep-reinforcement-learning-book/Chapter13-Learning-to-Run}},
 }
 ```
