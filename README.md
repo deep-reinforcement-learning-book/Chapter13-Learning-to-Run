@@ -68,7 +68,7 @@ for i in range(200):
 ## Citing:
 
 ```
-@misc{DeepReinforcementLearning-Chapter14-LearningtoRun,
+@misc{DeepReinforcementLearning-Chapter13-LearningtoRun,
   author = {Zihan Ding, Yanhua Huang},
   title = {Chapter13-LearningtoRun},
   year = {2019},
