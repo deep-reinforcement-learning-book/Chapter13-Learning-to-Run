@@ -68,6 +68,20 @@ for i in range(200):
 ## Citing:
 
 ```
+@book{deepRL-2020,
+ title={Deep Reinforcement Learning: Fundamentals, Research, and Applications},
+ editor={Hao Dong, Zihan Ding, Shanghang Zhang},
+ author={Hao Dong, Zihan Ding, Shanghang Zhang, Hang Yuan, Hongming Zhang, Jingqing Zhang, Yanhua Huang, Tianyang Yu, Huaqing Zhang, Ruitong Huang},
+ publisher={Springer Nature},
+ note={\url{http://www.deepreinforcementlearningbook.org}},
+ year={2020}
+}
+```
+
+or
+
+
+```
 @misc{DeepReinforcementLearning-Chapter13-LearningtoRun,
   author = {Zihan Ding, Yanhua Huang},
   title = {Chapter13-LearningtoRun},
